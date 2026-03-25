@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mot de passe oublié - Vite & Gourmand</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-white text-gray-700">
+
+
+    <header>
+      <nav class="bg-white shadow-md h-20 px-10 flex items-center justify-between sticky top-0 z-50">
+        <img
+          src="img/logo.png"
+          alt="Logo de l'entreprise Vite & Gourmand"
+          class="h-14 w-14"
+        />
+        <ul class="flex gap-8">
+          <li>
+            <a href="index.html" class="font-semibold hover:text-rose-500 transition-colors">Accueil</a>
+          </li>
+          <li>
+            <a href="menu.html" class="font-semibold hover:text-rose-500 transition-colors">Menu</a>
+          </li>
+          <li>
+            <a href="connexion.html" class="font-semibold hover:text-rose-500 transition-colors">Connexion</a>
+          </li>
+          <li>
+            <a href="inscription.html" class="font-semibold hover:text-rose-500 transition-colors">Inscription</a>
+          </li>
+        </ul>
+        <a
+          href="contact.html"
+          class="px-5 py-2 bg-rose-400 text-white font-bold rounded-full shadow hover:bg-rose-600 transition-colors"
+        >Contact</a>
+      </nav>
+    </header>
+
+    <main class="bg-rose-50 min-h-screen py-14 px-6 flex flex-col items-center">
+
+      <h2 class="text-3xl font-extrabold text-rose-500 mb-2">Mot de passe oublié ?</h2>
+      <p class="text-gray-500 text-sm mb-8 text-center">
+        Entrez votre adresse e-mail, nous vous enverrons un lien de réinitialisation.
+      </p>
+
+      <div class="bg-white border border-rose-200 rounded-2xl shadow-lg p-8 w-full max-w-sm">
+        <div class="flex flex-col gap-4">
+          <input
+            type="email"
+            placeholder="Adresse e-mail *"
+            required
+            class="border border-rose-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-rose-300"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full mt-6 py-2 bg-rose-400 text-white font-bold rounded-full shadow hover:bg-rose-600 transition-colors"
+        >
+          Confirmer
+        </button>
+
+        <p class="text-center text-xs text-gray-400 mt-4">
+          Retour à la
+          <a href="connexion.html" class="text-rose-500 hover:underline font-semibold">connexion</a>
+        </p>
+      </div>
+
+    </main>
+
+
+    <footer class="bg-rose-100 py-4 px-10">
+      <div class="flex justify-between items-start flex-wrap gap-4 max-w-5xl mx-auto">
+        <div>
+          <img src="img/logo.png" alt="Logo Vite & Gourmand" class="h-10 w-10 mb-1" />
+          <p class="font-bold text-rose-500">Vite & Gourmand</p>
+          <p class="text-xs text-gray-500">Traiteur événementiel à Bordeaux</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-1">Nos horaires :</h3>
+          <p class="text-sm">Lundi - Vendredi : 8h00 - 19h00</p>
+          <p class="text-sm">Samedi - Dimanche : 10h00 - 18h00</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-1">Liens utiles :</h3>
+          <ul class="flex flex-col gap-1 text-sm">
+            <li><a href="menu.html" class="hover:underline hover:text-rose-500">Menu</a></li>
+            <li><a href="contact.html" class="hover:underline hover:text-rose-500">Contact</a></li>
+            <li><a href="#" class="hover:underline hover:text-rose-500">Mentions légales</a></li>
+            <li><a href="#" class="hover:underline hover:text-rose-500">CGV</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-rose-300 mt-3 pt-2 text-center text-xs text-gray-400 max-w-5xl mx-auto">
+        © 2026 Vite & Gourmand — Tous droits réservés
+      </div>
+    </footer>
+
+  </body>
+</html>
