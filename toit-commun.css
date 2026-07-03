@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------------
+   Toit Commun — le strict minimum que Tailwind ne couvre pas :
+   1. les poignées des sliders (pseudo-éléments ::slider-thumb)
+   2. l'animation d'entrée des écrans (keyframes personnalisées)
+   Tout le reste du style est fait en classes Tailwind dans le HTML/JS.
+   ------------------------------------------------------------------ */
+
+.tc-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+}
+.tc-range:focus {
+  outline: none;
+}
+.tc-range::-webkit-slider-runnable-track {
+  background: transparent;
+}
+.tc-range::-moz-range-track {
+  background: transparent;
+}
+.tc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 3px solid var(--thumb, #c2410c);
+  box-shadow: 0 1px 4px rgba(28, 25, 23, 0.25);
+  cursor: grab;
+  margin-top: 3px;
+  transition: transform 0.15s;
+}
+.tc-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+.tc-range::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 3px solid var(--thumb, #c2410c);
+  box-shadow: 0 1px 4px rgba(28, 25, 23, 0.25);
+  cursor: grab;
+}
+
+@keyframes tc-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tc-in {
+  animation: tc-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
